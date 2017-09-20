@@ -1,4 +1,4 @@
-Version = "0.X9a"
+Version = "0.X10b"
 config = {
     Magnification: 1.0
     BatteryAlertLevel: 20
@@ -11,6 +11,7 @@ config = {
     colourWhit: "rgba(256,256,256,1)"
     colourIdleHover: "rgba(128,128,128,1)"
     colourWarnHover: "rgba(128,0,0,1)"
+    ShowUpdates: true
 }
 ## If you do not know how to write HTML/CSS, it is best for you to learn it first before
 ## attempting to customise the UI. Or you can contact me.
@@ -806,7 +807,8 @@ afterRender: (domEl) ->
             console.log "Version(Local): #{Version}"
             if Version != data.version
                 console.log "Yoo, you need an update"
-                $(domEl).find("#27").css("visibility", "visible")
+                if ShowUpdates == true
+                    $(domEl).find("#27").css("visibility", "visible")
             else
                 console.log "You have the newest version. OK, you're cool"
 
