@@ -11,6 +11,7 @@ if [ -f updateConfig.tmp ]; then
     sed -i "" "11s/.*/$(sed '11q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee &&
     sed -i "" "12s/.*/$(sed '12q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee &&
     sed -i "" "13s/.*/$(sed '13q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee &&
-    sed -i "" "14s/.*/$(sed '14q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee
+    sed -i "" "14s/.*/$(sed '14q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee &&
+    sed -i "" "15s/.*/$(sed '14q;d' updateConfig.tmp)/" ../Eva.widget/index.coffee
     rm updateConfig.tmp
 fi

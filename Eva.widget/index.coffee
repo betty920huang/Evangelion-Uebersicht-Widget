@@ -771,7 +771,7 @@ afterRender: (domEl) ->
     window.count = -1
     $(domEl).on 'click', '#27', =>
         $(domEl).find("#27 .contentS").text("loading")
-        @run "head -14 Eva.widget/index.coffee > updateConfig.tmp &&
+        @run "head -15 Eva.widget/index.coffee > updateConfig.tmp &&
             curl -o ../Evangelion_style_dashboard.widget.zip https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/master/Evangelion_style_dashboard.widget.zip &&
             cp -r Eva.widget ../Eva.widget &&
             unzip -o ../Evangelion_style_dashboard.widget.zip -d ../ &&
