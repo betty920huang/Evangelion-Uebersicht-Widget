@@ -792,7 +792,7 @@ afterRender: (domEl) ->
     $(domEl).on 'click', '#27', =>
         $(domEl).find("#27 .contentS").text("loading")
         @run "head -16 Eva.widget/index.coffee > updateConfig.tmp &&
-            curl -o ../Evangelion_style_dashboard.widget.zip https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/master/Evangelion_style_dashboard.widget.zip &&
+            curl -o ../Evangelion_style_dashboard.widget.zip https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/#{config.remoteBranch}/Evangelion_style_dashboard.widget.zip &&
             cp -r Eva.widget ../Eva.widget &&
             unzip -o ../Evangelion_style_dashboard.widget.zip -d ../ &&
             sh ../Eva.widget/updateConfig.sh &&
