@@ -770,17 +770,6 @@ afterRender: (domEl) ->
     window.Mwarning=0
     window.cellColour=-1
     window.count = -1
-    $(domEl).on 'click', '#27', =>
-        $(domEl).find("#27 .contentS").text("loading")
-        @run "head -15 Eva.widget/index.coffee > updateConfig.tmp &&
-            curl -o ../Evangelion_style_dashboard.widget.zip https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/master/Evangelion_style_dashboard.widget.zip &&
-            cp -r Eva.widget ../Eva.widget &&
-            unzip -o ../Evangelion_style_dashboard.widget.zip -d ../ &&
-            sh ../Eva.widget/updateConfig.sh &&
-            cp -r ../Eva.widget/* ./Eva.widget/ &&
-            rm -r ../Evangelion_style_dashboard.widget.zip &&
-            rm -r ../Eva.widget &&
-            rm -r ../__MACOSX"
 
 
     $(domEl).on 'click', '.iTunesPre', => @run "osascript -e 'tell application \"iTunes\" to previous track'"
@@ -799,16 +788,30 @@ afterRender: (domEl) ->
 "
     $(domEl).on 'click', '#65', => @run "ls /Volumes/ | awk -F'\t' '{ print $0}' > tmp.txt;i=1; cat tmp.txt | sed -e 's/[ ]/\\ /g ' | while read line; do if [ \"$i\" -eq 5 ]; then open /Volumes/\"${line}\"; fi; let i=i+1; done; rm tmp.txt
 "
+
+    $(domEl).on 'click', '#27', =>
+        $(domEl).find("#27 .contentS").text("loading")
+        @run "head -16 Eva.widget/index.coffee > updateConfig.tmp &&
+            curl -o ../Evangelion_style_dashboard.widget.zip https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/master/Evangelion_style_dashboard.widget.zip &&
+            cp -r Eva.widget ../Eva.widget &&
+            unzip -o ../Evangelion_style_dashboard.widget.zip -d ../ &&
+            sh ../Eva.widget/updateConfig.sh &&
+            cp -r ../Eva.widget/* ./Eva.widget/ &&
+            rm -r ../Evangelion_style_dashboard.widget.zip &&
+            rm -r ../Eva.widget &&
+            rm -r ../__MACOSX"
+
     @run "rm Eva.widget/netstat.ipworking"
 
-    $.ajax 'https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/#{config.remoteBranch}/widget.json',
+    url = "https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/#{config.remoteBranch}/widget.json"
+    $.ajax url,
         dataType: 'json'
         success: (data, textStatus, jqXHR) ->
             console.log "Version(Online): #{data.version}"
             console.log "Version(Local): #{Version}"
             if Version != data.version
                 console.log "Yoo, you need an update"
-                if ShowUpdates == true
+                if config.ShowUpdates == true
                     $(domEl).find("#27").css("visibility", "visible")
             else
                 console.log "You have the newest version. OK, you're cool"
