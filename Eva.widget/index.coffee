@@ -12,6 +12,7 @@ config = {
     colourIdleHover: "rgba(128,128,128,1)"
     colourWarnHover: "rgba(128,0,0,1)"
     ShowUpdates: true
+    remoteBranch: "dev"
 }
 ## If you do not know how to write HTML/CSS, it is best for you to learn it first before
 ## attempting to customise the UI. Or you can contact me.
@@ -800,7 +801,7 @@ afterRender: (domEl) ->
 "
     @run "rm Eva.widget/netstat.ipworking"
 
-    $.ajax 'https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/master/widget.json',
+    $.ajax 'https://raw.githubusercontent.com/jeticg/Evangelion-Uebersicht-Widget/#{config.remoteBranch}/widget.json',
         dataType: 'json'
         success: (data, textStatus, jqXHR) ->
             console.log "Version(Online): #{data.version}"
