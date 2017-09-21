@@ -1,4 +1,4 @@
-Version = "0.X10b"
+Version = "0.X10a"
 config = {
     Magnification: 1.0
     BatteryAlertLevel: 20
@@ -12,7 +12,7 @@ config = {
     colourIdleHover: "rgba(128,128,128,1)"
     colourWarnHover: "rgba(128,0,0,1)"
     ShowUpdates: true
-    remoteBranch: "dev"
+    remoteBranch: "master"
 }
 ## If you do not know how to write HTML/CSS, it is best for you to learn it first before
 ## attempting to customise the UI. Or you can contact me.
