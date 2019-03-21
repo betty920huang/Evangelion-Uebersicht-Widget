@@ -18,61 +18,61 @@ The interface is MULTI-LANGUAGE! So don't worry if you don't speak German. Suppo
 * English
 
 ## Click to update!
-Starting from 0.X8a, you can update Evangelion Übersicht Widget by clicking the update button! Not that there will be frequent updates, but it saves time. I'll try out some ways to make updating even cooler, given time that is.
+Starting from 0.X8a, you can update Evangelion Übersicht Widget by clicking the update button! Not that there will be frequent updates, but it saves time. I'll try to make cooler update in a given time.
 
 ![alt text](https://github.com/jeticg/Evangelion-Uebersicht-Widget/raw/master/support/updateButton.png "Say hi to update button!")
 
 ## Memory Usage VS Memory Pressure
-Starting from 0.X11a, memory cell will be displaying memory pressure level (NORMAL, WARN, CRITICAL). The reason behind this move is simple: memory usage percentage make little sense in OSX now.
+Starting from 0.X11a, memory cell are used for displaying memory pressure level (NORMAL, WARN, CRITICAL) since memory usage percentage is less-commonly used in OSX now.
 
-A few years ago, OSX implemented a new virtual memory technology called memory compression (OK it's actually ancient, but people stopped using it as memory got larger back in the 90s). It is this technology that renders memory percentage information less useful. Imagine you have a lot of stuff taking up memory, but you could not tell exactly how much because you do not know how many of them are compressed. Memory pressure aims at showing exactly that. When there are too much stuff compressed in memory that it is slowing down performance, the memory pressure level raises. OSX defines 3 levels: NORMAL, WARN, CRITICAL. In NORMAL, everything will be fine and there is no performance issue. When it reaches WARN, there will be noticeable drop in performance and this is when one should take action to clean up one's memory (or upgrade one's RAM). As soon as it reaches CRITICAL, the computer will likely freeze up (too busy doing memory stuff than doing actual computations) and ask you to terminate certain processes.
+A few years ago, OSX implemented a new virtual memory technology called memory compression which makes memory percentage information less attractive to users. If your program is memory-consuming, then it becomes a trouble to know exactly how much memory space will be occupied after compression since you do not know how many of them are compressed. Memory pressure aims at showing the exact memory space will be taken for a program. The performance will get worse if many stuff are compressed and the memory pressure level raises. OSX defines 3 memory pressure levels: NORMAL, WARN, CRITICAL. If the memory cell is in NORMAL level, everything works fine and no affects on the performance. When it reaches to WARN, there will be noticeable drop in performance and it is the time for users to clean up their memories (or upgrade RAMs). As soon as it becomes CRITICAL, the computer will likely be frozen (too busy dealing with memory than doing actual computations, no progress from the user side) and ask you to terminate some targeted processes.
 
-In short, take actions when you see the memory cell turn red!
+Taking actions when you see the memory cell turns red to the CRITICAL level!
 
 ## Major Update Notice!
-If you are using an earlier version of this widget (before 0.X2a), please consider installing the versions after 0.X2a. I managed to solve the performance problem, now in alert mode it will only require 10% of the earlier version's energy, and 20% of the earlier version's CPU!
+If you are using an earlier version of this widget (before 0.X2a), please consider to make an update. Since later versions have a dramatic improvement in utility saving. It will only require 10% of energy, and 20% of CPU compared with earlier versions!
 
 ## About
 This widget is an Evangelion Übersicht Widget, displaying information through a huge amount of cells on your desktop.
 
-If you leaves nothing on your desktop except for less than six mounted volumes (system volumes, connected servers etc.), this widget can replace your desktop completely.
+On your desktop, even if you only display less than six mounted volumes (system volumes, connected servers etc.), this widget can completely replace it.
 
 Currently with this widget you can:
 
 1. View time
 2. Check CPU and memory usage (Memory pressure is displayed)
 3. Check battery status
-4. Check you Trash size
-5. Check your public ip address
-6. Control your iTunes, show current artist and title, and Album cover
-7. Show first 5 of all your mounted volumes in alphabetical order
-8. Show network traffic
+4. Check your Trash size
+5. Check your public IP address
+6. Control your iTunes, show current artist, title, and Album cover
+7. Display the first 5 of all your mounted volumes in alphabetical order
+8. Display network traffic
 9. Alert on DoNotDisturb mode
 10. Vocal notice on alerts. Default is OFF, turn it on by setting config.Voice to true
 
 Special features
 * Update button displayed when new version is out
-* Alarm system, triggers when CPU usage is too high or battery drops to below 20% without charging
+* Alarm system, triggers when CPU usage is too high or battery drops below 20% without charging
 * Empty your trash bin by clicking the trash cell
 * Open up a volume by clicking it
 
 Feedback
 
 * My email is jetic@me.com
-* Please note that this widget is still under development and open for suggestions. If you have any idea on how to improve this widget or new features you would like to see, please do not hesitate to contact me.
-* If you are encountering any problem with the display, please click cell number 32 and see the original console output and contact me with the information you see in the output, otherwise it could be hard to determine what went wrong.
+* Please note that this widget is still under development and open for suggestions. If you have any ideas on how to improve this widget or the new features you would like to see, please do not hesitate to contact me.
+* If you are encountering any problems in displaying, please click cell number 32 to see the original console output and contact me with the output, otherwise it is hard for me to determine the problem.
 
 
 ## Updates
 
 0.X11a
-* Now monitoring memory pressure, since memory percentage does not make sense for macOS
+* Monitor memory pressure, since memory percentage is meaningless for macOS
 
 0.X10a
-* Added option to not show the update button
+* Add option hide the update button
 
 0.X9a
-* Update now preserves customised settings (starting from next update)
+* Preserve customised settings (starting from next update)
 
 0.X8a
 * Display an update button when there are new versions available
@@ -89,8 +89,8 @@ Feedback
 0.X4b
 * Fixed a few minor bugs with the scripts
 * Fixed a bug with desktop computers
-* Added the option to change colours
-* Added a lot of options to customise the widget
+* Added an option to change colours
+* Added many options to customise the widget
 * Added voice notifications. Default option is OFF to avoid annoyance.
 
 0.X3a
@@ -98,10 +98,10 @@ Feedback
 * Updated a few lines of comments.
 
 0.X2a (Major Update!)
-* This is probably the most important update since 0.5a. I added some major improvements to make it faster and fixed a lot of ages old bugs, and most importantly the energy consumption problem.
+* This is probably the most important update since 0.5a. I added some major improvements to make it faster and fixed many of aged bugs but most importantly, I solved the energy consumption problem.
 
 0.X1a
-* This new version includes a lot of migration from commands to scripts to improve performance and potentially, decrease energy demand. I want to experiment with some new ideas to make it more battery and CPU friendly.
+* This new version included a lot of migration from commands to scripts to improve performance and potentially decrease energy demand. I want to experiment with some new ideas to make it more battery and CPU friendly.
 
 0.Xa
 * Removed language support for Traditional Chinese
@@ -235,7 +235,7 @@ Feedback
 * Output cells enabled, press on cell 32 and information will popup
 
 0.21a
-* Fixed Trash
+* Fixed Trash Issue 
 
 0.2a
 * Fix battery hover
