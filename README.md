@@ -1,7 +1,7 @@
 # Evangelion-Übersicht-Widget
 
 ## Installation
-Who am I kidding, the only thing you need to know is this is a widget for [Übersicht](http://tracesof.net/uebersicht/). 
+Who am I kidding, the only thing you need to know is this is a widget for [Übersicht](http://tracesof.net/uebersicht/).
 
 * Quick Installation
 	* Install Übersicht
@@ -11,14 +11,14 @@ Who am I kidding, the only thing you need to know is this is a widget for [Über
 
 ## Instruction
 
-For those who have trouble with clicking, please check your Übersicht settings.
-
-The interface is MULTI-LANGUAGE! So don't worry if you don't speak German. Supported languages:
+For those who have trouble reading and clicking, please check your Übersicht settings to change the language setting.
+The interface is MULTI-LANGUAGE! So don't worry if you don't speak German.
+Supported languages:
 * Deutsch
 * English
 
 ## Click to update!
-Starting from 0.X8a, you can update Evangelion Übersicht Widget by clicking the update button! Not that there will be frequent updates, but it saves time. I'll try to make cooler update in a given time.
+Starting from 0.X8a, you can update Evangelion Übersicht Widget by clicking the update button! Note that there will be frequent updates, but it will be worth your time. I'll try to make cooler updates in a given time frame.
 
 ![alt text](https://github.com/jeticg/Evangelion-Uebersicht-Widget/raw/master/support/updateButton.png "Say hi to update button!")
 
@@ -235,7 +235,7 @@ Feedback
 * Output cells enabled, press on cell 32 and information will popup
 
 0.21a
-* Fixed Trash Issue 
+* Fixed Trash Issue
 
 0.2a
 * Fix battery hover
